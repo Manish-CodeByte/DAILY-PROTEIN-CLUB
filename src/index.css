@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-black: #000000;
+    --surface-dark: #0A0A0C;
+    --card-surface: #111214;
+    --hairline-border: rgba(255, 255, 255, 0.08);
+    --electric-blue: #0A84FF;
+    --cyan-accent: #22D3EE;
+    --ice-blue: #7DD3FC;
+    --text-primary: #F5F5F7;
+    --text-secondary: #A1A1A6;
+  }
+
+  body {
+    background-color: var(--bg-black);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Apple Minimalist Utilities */
+.apple-card {
+  background-color: #111214;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.apple-card:hover {
+  border-color: rgba(10, 132, 255, 0.3);
+}
+
+.apple-input {
+  background-color: #0A0A0C;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #F5F5F7;
+  transition: all 0.2s ease-out;
+}
+
+.apple-input:focus {
+  outline: none;
+  border-color: #0A84FF;
+  box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.2);
+}
+
+/* Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #000000;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1A1C20;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #0A84FF;
+}

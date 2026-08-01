@@ -1,0 +1,68 @@
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import { Navbar } from './components/layout/Navbar';
+import { Footer } from './components/layout/Footer';
+import { CartDrawer } from './components/cart/CartDrawer';
+import { QuickViewModal } from './components/food/QuickViewModal';
+import { Toast } from './components/UI/Toast';
+import { FloatingContactWidget } from './components/UI/FloatingContactWidget';
+
+import { HomePage } from './pages/HomePage';
+import { MenuPage } from './pages/MenuPage';
+import { BowlBuilderPage } from './pages/BowlBuilderPage';
+import { FitnessNutritionPage } from './pages/FitnessNutritionPage';
+import { CalculatorsPage } from './pages/CalculatorsPage';
+import { AboutContactPage } from './pages/AboutContactPage';
+
+// Scroll to top helper on route change
+const ScrollToTop: React.FC = () => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
+
+  return null;
+};
+
+export const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <CartProvider>
+        <ScrollToTop />
+        <div className="min-h-screen flex flex-col bg-[#0B0B0B] text-white selection:bg-[#39D353]/30 selection:text-[#39D353]">
+          <Navbar />
+          
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/menu" element={<MenuPage />} />
+              <Route path="/builder" element={<BowlBuilderPage />} />
+              <Route path="/fitness" element={<FitnessNutritionPage />} />
+              <Route path="/calculators" element={<CalculatorsPage />} />
+              <Route path="/contact" element={<AboutContactPage />} />
+            </Routes>
+          </div>
+
+          <Footer />
+
+          {/* Drawers, Modals & Floating Quick Contact Widget */}
+          <CartDrawer />
+          <QuickViewModal />
+          <FloatingContactWidget />
+          <Toast />
+        </div>
+      </CartProvider>
+    </BrowserRouter>
+  );
+};
+
+export default App;

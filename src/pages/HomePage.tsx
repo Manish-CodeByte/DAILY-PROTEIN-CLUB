@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeroSection } from '../components/home/HeroSection';
+import { WhyChooseUsSection } from '../components/home/WhyChooseUsSection';
 import { CategoriesSection } from '../components/home/CategoriesSection';
 import { BestSellersSection } from '../components/home/BestSellersSection';
 import { BowlBuilderBanner } from '../components/home/BowlBuilderBanner';
@@ -13,6 +14,7 @@ export const HomePage: React.FC = () => {
   return (
     <main className="w-full overflow-x-hidden">
       <HeroSection />
+      <WhyChooseUsSection />
       <CategoriesSection />
       <BestSellersSection />
       <BowlBuilderBanner />

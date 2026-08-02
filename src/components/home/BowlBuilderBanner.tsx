@@ -41,8 +41,8 @@ export const BowlBuilderBanner: React.FC = () => {
               
               <div className="flex gap-4 items-center">
                 <img
-                  src="/hero-protein-bowl.png"
-                  alt="High Protein Power Bowl"
+                  src="/grilled-chicken-bowl.png"
+                  alt="High Protein Grilled Chicken & Avocado Bowl"
                   className="w-20 h-20 rounded-2xl object-cover shrink-0 border border-white/10 bg-black/40 p-1"
                 />
                 <div className="flex-1 min-w-0">
@@ -50,9 +50,9 @@ export const BowlBuilderBanner: React.FC = () => {
                     <span className="flex items-center gap-1 text-[#0A84FF]">
                       <Target className="w-4 h-4" /> Lean Bulk (+Protein)
                     </span>
-                    <span className="text-[#F5F5F7] font-mono">615 kcal</span>
+                    <span className="text-[#F5F5F7] font-mono">580 kcal</span>
                   </div>
-                  <span className="text-[11px] text-[#A1A1A6]">Soft-Boiled Eggs, Avocado & Mushrooms</span>
+                  <span className="text-[11px] text-[#A1A1A6]">Herb Grilled Chicken, Avocado & Quinoa</span>
                 </div>
               </div>
 

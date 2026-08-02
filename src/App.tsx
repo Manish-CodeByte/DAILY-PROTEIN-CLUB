@@ -38,13 +38,16 @@ export const App: React.FC = () => {
     <BrowserRouter>
       <CartProvider>
         <ScrollToTop />
-        <div className="relative min-h-screen flex flex-col bg-[#000000] text-[#F5F5F7] selection:bg-[#0A84FF]/30 selection:text-[#0A84FF]">
+        <div className="relative min-h-screen flex flex-col bg-[#000000] text-[#F5F5F7] selection:bg-[#0A84FF]/30 selection:text-[#0A84FF] overflow-x-hidden">
           
-          {/* Subtle Ambient Food Prep Background Texture Layer */}
+          {/* FULL WEBSITE LINEN FOOD BACKGROUND WITH VIGNETTE */}
           <div
-            className="fixed inset-0 pointer-events-none z-0 opacity-10 bg-cover bg-center filter contrast-125 mix-blend-luminosity"
-            style={{ backgroundImage: "url('/website-bg-texture.png')" }}
+            className="fixed inset-0 pointer-events-none z-0 bg-cover bg-center bg-fixed opacity-30 filter brightness-75 contrast-110"
+            style={{ backgroundImage: "url('/linen-food-bg.png')" }}
           />
+
+          {/* Dark Radial Gradient Overlay for High Text Readability */}
+          <div className="fixed inset-0 pointer-events-none z-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85 backdrop-blur-[2px]" />
 
           <Navbar />
           

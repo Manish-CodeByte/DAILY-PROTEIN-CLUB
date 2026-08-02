@@ -100,7 +100,7 @@ export const QuickViewModal: React.FC = () => {
               <Badge variant={quickViewItem.isVegetarian ? 'veg' : 'nonveg'}>
                 {quickViewItem.isVegetarian ? '🌱 100% Veg' : '🍗 Non-Veg'}
               </Badge>
-              {quickViewItem.isBestSeller && <Badge variant="blue">🔥 Bestseller</Badge>}
+              {quickViewItem.isBestSeller && <Badge variant="emerald">🔥 Bestseller</Badge>}
             </div>
 
             <button

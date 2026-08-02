@@ -112,18 +112,18 @@ export const BowlBuilderPage: React.FC = () => {
   });
 
   return (
-    <div className="pt-24 sm:pt-28 pb-28 lg:pb-20 bg-[#000000] min-h-screen text-[#F5F5F7]">
+    <div className="pt-24 sm:pt-28 pb-28 lg:pb-20 text-[#F9FAFB] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0A84FF]/15 text-[#0A84FF] border border-[#0A84FF]/30 text-xs font-bold uppercase tracking-widest mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/30 text-xs font-bold uppercase tracking-widest mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Interactive Precision Builder
           </span>
-          <h1 className="text-3xl sm:text-5xl font-black text-[#F5F5F7] tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black text-[#F9FAFB] tracking-tight">
             The Precision Bowl Builder
           </h1>
-          <p className="text-xs sm:text-sm text-[#A1A1A6] mt-2 leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#9CA3AF] mt-2 leading-relaxed">
             Select your target fitness goal, pick fresh ingredients from the pantry, and watch your real-time macro gauges map out your gains!
           </p>
         </div>
@@ -135,11 +135,11 @@ export const BowlBuilderPage: React.FC = () => {
           {/* COLUMN 1: MACRO-MAPPING TARGET (Static Goal Setting)      */}
           {/* ========================================================= */}
           <div className="lg:col-span-3 space-y-4">
-            <div className="bg-[#111214] p-4 sm:p-5 rounded-3xl border border-white/10 space-y-4 shadow-xl">
+            <div className="bg-[#0F172A]/70 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl border border-[#10B981]/20 space-y-4 shadow-xl">
               
               <div className="flex items-center gap-2 pb-3 border-b border-white/10">
-                <Target className="w-5 h-5 text-[#0A84FF]" />
-                <h3 className="font-extrabold text-[#F5F5F7] text-sm uppercase tracking-wider">
+                <Target className="w-5 h-5 text-[#10B981]" />
+                <h3 className="font-extrabold text-[#F9FAFB] text-sm uppercase tracking-wider">
                   1. Set Target Goal
                 </h3>
               </div>
@@ -155,25 +155,25 @@ export const BowlBuilderPage: React.FC = () => {
                       onClick={() => setSelectedGoalId(goal.id)}
                       className={`w-full p-3 rounded-2xl border text-left transition-all duration-200 ${
                         isSelected
-                          ? 'bg-[#0A84FF]/15 border-[#0A84FF] text-[#F5F5F7] shadow-md shadow-[#0A84FF]/10'
-                          : 'bg-[#0A0A0C] border-white/10 text-[#A1A1A6] hover:border-white/20'
+                          ? 'bg-[#10B981]/15 border-[#10B981] text-[#F9FAFB] shadow-md shadow-[#10B981]/10'
+                          : 'bg-[#090D16] border-white/10 text-[#9CA3AF] hover:border-white/20'
                       }`}
                     >
                       <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-2">
-                          <Icon className={`w-4 h-4 ${isSelected ? 'text-[#0A84FF]' : 'text-[#A1A1A6]'}`} />
-                          <span className="text-xs font-bold text-[#F5F5F7]">{goal.name}</span>
+                          <Icon className={`w-4 h-4 ${isSelected ? 'text-[#10B981]' : 'text-[#9CA3AF]'}`} />
+                          <span className="text-xs font-bold text-[#F9FAFB]">{goal.name}</span>
                         </div>
-                        {isSelected && <Check className="w-3.5 h-3.5 text-[#0A84FF]" />}
+                        {isSelected && <Check className="w-3.5 h-3.5 text-[#10B981]" />}
                       </div>
-                      <p className="text-[10px] text-[#A1A1A6] line-clamp-2 leading-snug">{goal.subtitle}</p>
+                      <p className="text-[10px] text-[#9CA3AF] line-clamp-2 leading-snug">{goal.subtitle}</p>
 
                       {/* Goal Target Pills */}
-                      <div className="flex items-center gap-2 mt-2 pt-2 border-t border-white/10 text-[10px] font-semibold text-[#A1A1A6]">
-                        <span className="text-[#0A84FF]">P: {goal.targetProtein}g</span>
-                        <span className="text-[#22D3EE]">C: {goal.targetCarbs}g</span>
-                        <span className="text-[#7DD3FC]">F: {goal.targetFat}g</span>
-                        <span className="text-[#F5F5F7] ml-auto">{goal.targetCalories} kcal</span>
+                      <div className="flex items-center gap-2 mt-2 pt-2 border-t border-white/10 text-[10px] font-semibold text-[#9CA3AF]">
+                        <span className="text-[#10B981]">P: {goal.targetProtein}g</span>
+                        <span className="text-[#06B6D4]">C: {goal.targetCarbs}g</span>
+                        <span className="text-[#38BDF8]">F: {goal.targetFat}g</span>
+                        <span className="text-[#F9FAFB] ml-auto">{goal.targetCalories} kcal</span>
                       </div>
                     </button>
                   );
@@ -181,14 +181,14 @@ export const BowlBuilderPage: React.FC = () => {
               </div>
 
               {/* Accuracy Match Gauge Pill */}
-              <div className="p-3.5 rounded-2xl bg-[#0A0A0C] border border-white/10 text-center space-y-1">
-                <span className="text-[10px] font-bold text-[#A1A1A6] uppercase tracking-widest block">
+              <div className="p-3.5 rounded-2xl bg-[#090D16] border border-white/10 text-center space-y-1">
+                <span className="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-widest block">
                   Goal Match Accuracy
                 </span>
-                <span className="text-2xl font-black text-[#0A84FF] block">
+                <span className="text-2xl font-black text-[#10B981] block">
                   {overallAccuracy}%
                 </span>
-                <span className="text-[10px] text-[#A1A1A6] block font-medium">
+                <span className="text-[10px] text-[#9CA3AF] block font-medium">
                   {overallAccuracy >= 90 ? '🔥 Perfect Macro Alignment!' : 'Add more ingredients to hit target'}
                 </span>
               </div>
@@ -200,11 +200,11 @@ export const BowlBuilderPage: React.FC = () => {
           {/* COLUMN 2: INGREDIENTS PANTRY (The Options)               */}
           {/* ========================================================= */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="bg-[#111214] p-4 sm:p-5 rounded-3xl border border-white/10 space-y-4 shadow-xl">
+            <div className="bg-[#0F172A]/70 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl border border-[#10B981]/20 space-y-4 shadow-xl">
               
               <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                <h3 className="font-extrabold text-[#F5F5F7] text-sm uppercase tracking-wider flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#22D3EE]" /> 2. Pick Ingredients
+                <h3 className="font-extrabold text-[#F9FAFB] text-sm uppercase tracking-wider flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#06B6D4]" /> 2. Pick Ingredients
                 </h3>
 
                 {/* Veg Filter Toggle */}
@@ -213,7 +213,7 @@ export const BowlBuilderPage: React.FC = () => {
                   className={`px-3 py-1 rounded-full text-[10px] font-extrabold border transition-all ${
                     vegOnlyFilter
                       ? 'bg-emerald-950/80 text-emerald-400 border-emerald-500'
-                      : 'bg-[#0A0A0C] text-[#A1A1A6] border-white/10'
+                      : 'bg-[#090D16] text-[#9CA3AF] border-white/10'
                   }`}
                 >
                   🌱 Veg Only
@@ -221,7 +221,7 @@ export const BowlBuilderPage: React.FC = () => {
               </div>
 
               {/* Pantry Category Tabs */}
-              <div className="grid grid-cols-4 gap-1.5 p-1 rounded-2xl bg-[#0A0A0C] border border-white/10">
+              <div className="grid grid-cols-4 gap-1.5 p-1 rounded-2xl bg-[#090D16] border border-white/10">
                 {(['proteins', 'bases', 'veggies', 'toppings'] as PantryCategory[]).map(tab => {
                   const isActive = activeCategoryTab === tab;
                   return (
@@ -230,8 +230,8 @@ export const BowlBuilderPage: React.FC = () => {
                       onClick={() => setActiveCategoryTab(tab)}
                       className={`py-2 text-[10px] font-extrabold uppercase rounded-xl transition-all ${
                         isActive
-                          ? 'bg-[#0A84FF] text-white shadow-md'
-                          : 'text-[#A1A1A6] hover:text-[#F5F5F7]'
+                          ? 'bg-[#10B981] text-black shadow-md'
+                          : 'text-[#9CA3AF] hover:text-[#F9FAFB]'
                       }`}
                     >
                       {tab === 'veggies' ? 'Veggies' : tab}
@@ -253,8 +253,8 @@ export const BowlBuilderPage: React.FC = () => {
                       onClick={() => handleTogglePantryItem(item)}
                       className={`relative p-3 rounded-2xl border cursor-pointer transition-all duration-200 flex flex-col justify-between ${
                         isSelected
-                          ? 'bg-[#0A84FF]/10 border-[#0A84FF] shadow-md shadow-[#0A84FF]/10'
-                          : 'bg-[#0A0A0C] border-white/10 hover:border-white/20'
+                          ? 'bg-[#10B981]/15 border-[#10B981] shadow-md shadow-[#10B981]/10'
+                          : 'bg-[#090D16] border-white/10 hover:border-white/20'
                       }`}
                     >
                       <div className="flex gap-3 items-center mb-2">
@@ -264,29 +264,29 @@ export const BowlBuilderPage: React.FC = () => {
                           className="w-12 h-12 rounded-xl object-cover shrink-0"
                         />
                         <div className="flex-1 min-w-0">
-                          <h4 className="text-xs font-bold text-[#F5F5F7] truncate">{item.name}</h4>
-                          <span className="text-[10px] text-[#A1A1A6] block">{item.portionSize}</span>
-                          <span className="text-xs font-extrabold text-[#0A84FF] block mt-0.5">
+                          <h4 className="text-xs font-bold text-[#F9FAFB] truncate">{item.name}</h4>
+                          <span className="text-[10px] text-[#9CA3AF] block">{item.portionSize}</span>
+                          <span className="text-xs font-extrabold text-[#10B981] block mt-0.5">
                             +{formatCurrency(item.price)}
                           </span>
                         </div>
                       </div>
 
                       {/* Item Macro Chips */}
-                      <div className="grid grid-cols-4 gap-1 p-1.5 rounded-xl bg-[#111214] text-center text-[9px] font-bold border border-white/10">
-                        <span className="text-[#0A84FF]">P:{item.protein}g</span>
-                        <span className="text-[#22D3EE]">C:{item.carbs}g</span>
-                        <span className="text-[#7DD3FC]">F:{item.fat}g</span>
-                        <span className="text-[#F5F5F7]">{item.calories}c</span>
+                      <div className="grid grid-cols-4 gap-1 p-1.5 rounded-xl bg-[#0F172A] text-center text-[9px] font-bold border border-white/10">
+                        <span className="text-[#10B981]">P:{item.protein}g</span>
+                        <span className="text-[#06B6D4]">C:{item.carbs}g</span>
+                        <span className="text-[#38BDF8]">F:{item.fat}g</span>
+                        <span className="text-[#F9FAFB]">{item.calories}c</span>
                       </div>
 
                       {/* Select / Deselect Pill */}
                       <div className="mt-2.5 flex items-center justify-between pt-2 border-t border-white/10">
-                        <span className="text-[10px] font-extrabold uppercase text-[#A1A1A6]">
+                        <span className="text-[10px] font-extrabold uppercase text-[#9CA3AF]">
                           {isSelected ? `Added (${selectedQty}x)` : 'Tap to Add'}
                         </span>
                         <div className={`w-5 h-5 rounded-full flex items-center justify-center ${
-                          isSelected ? 'bg-[#0A84FF] text-white' : 'border border-white/20 text-[#A1A1A6]'
+                          isSelected ? 'bg-[#10B981] text-black' : 'border border-white/20 text-[#9CA3AF]'
                         }`}>
                           {isSelected ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : <Plus className="w-3 h-3" />}
                         </div>
@@ -303,17 +303,17 @@ export const BowlBuilderPage: React.FC = () => {
           {/* COLUMN 3: LIVE BOWL & VISUAL MACRO-MAPPER (Framer Motion) */}
           {/* ========================================================= */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="bg-[#111214] p-4 sm:p-5 rounded-3xl border border-white/10 space-y-5 shadow-xl">
+            <div className="bg-[#0F172A]/70 backdrop-blur-2xl p-4 sm:p-5 rounded-3xl border border-[#10B981]/20 space-y-5 shadow-xl">
               
               {/* Header */}
               <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                <h3 className="font-extrabold text-[#F5F5F7] text-sm uppercase tracking-wider flex items-center gap-2">
-                  <Dumbbell className="w-4 h-4 text-[#0A84FF]" /> 3. Live Bowl & Macro-Mapper
+                <h3 className="font-extrabold text-[#F9FAFB] text-sm uppercase tracking-wider flex items-center gap-2">
+                  <Dumbbell className="w-4 h-4 text-[#10B981]" /> 3. Live Bowl & Macro-Mapper
                 </h3>
                 {selectedPantryItems.length > 0 && (
                   <button
                     onClick={handleResetBowl}
-                    className="text-[10px] font-semibold text-[#A1A1A6] hover:text-red-400 flex items-center gap-1"
+                    className="text-[10px] font-semibold text-[#9CA3AF] hover:text-rose-400 flex items-center gap-1"
                   >
                     <RotateCcw className="w-3 h-3" /> Clear
                   </button>
@@ -321,19 +321,19 @@ export const BowlBuilderPage: React.FC = () => {
               </div>
 
               {/* Visual Bowl Animation Container */}
-              <div className="relative p-4 rounded-3xl bg-[#0A0A0C] border border-white/10 min-h-[150px] flex flex-col justify-between overflow-hidden">
+              <div className="relative p-4 rounded-3xl bg-[#090D16] border border-white/10 min-h-[150px] flex flex-col justify-between overflow-hidden">
                 <div className="flex justify-between items-center text-xs mb-2">
-                  <span className="text-[#A1A1A6] font-bold uppercase text-[10px] tracking-wider">
+                  <span className="text-[#9CA3AF] font-bold uppercase text-[10px] tracking-wider">
                     Bowl Contents ({selectedPantryItems.length} items)
                   </span>
-                  <span className="text-[#0A84FF] font-bold">{formatCurrency(totalPrice)}</span>
+                  <span className="text-[#10B981] font-bold">{formatCurrency(totalPrice)}</span>
                 </div>
 
                 {/* Animated Flying Ingredient Badges */}
                 <div className="flex flex-wrap gap-1.5 my-2">
                   <AnimatePresence>
                     {selectedPantryItems.length === 0 ? (
-                      <p className="text-xs text-[#A1A1A6] italic text-center w-full py-4">
+                      <p className="text-xs text-[#9CA3AF] italic text-center w-full py-4">
                         Your bowl is empty. Select ingredients from the pantry!
                       </p>
                     ) : (
@@ -344,14 +344,14 @@ export const BowlBuilderPage: React.FC = () => {
                           animate={{ scale: 1, y: 0, opacity: 1 }}
                           exit={{ scale: 0, opacity: 0 }}
                           transition={{ duration: 0.2 }}
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#111214] border border-white/10 text-[11px] text-[#F5F5F7] font-semibold"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#0F172A] border border-white/10 text-[11px] text-[#F9FAFB] font-semibold"
                         >
                           <img src={item.image} alt={item.name} className="w-4 h-4 rounded-full object-cover" />
                           <span className="truncate max-w-[110px]">{item.name}</span>
-                          <span className="text-[#0A84FF] font-bold">x{quantity}</span>
+                          <span className="text-[#10B981] font-bold">x{quantity}</span>
                           <button
                             onClick={() => handleUpdateQuantity(item.id, -1)}
-                            className="text-[#A1A1A6] hover:text-red-400 ml-1"
+                            className="text-[#9CA3AF] hover:text-rose-400 ml-1"
                           >
                             <Trash2 className="w-3 h-3" />
                           </button>
@@ -362,77 +362,77 @@ export const BowlBuilderPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* THE VISUAL MACRO-MAPPER (Framer Motion Animated Gauges in Cohesive Blue Palette) */}
-              <div className="p-4 rounded-3xl bg-[#0A0A0C] border border-white/10 space-y-4">
+              {/* THE VISUAL MACRO-MAPPER (Framer Motion Animated Gauges in Emerald Teal Palette) */}
+              <div className="p-4 rounded-3xl bg-[#090D16] border border-white/10 space-y-4">
                 
                 {/* Total Calories Center Counter */}
                 <div className="text-center pb-3 border-b border-white/10">
-                  <span className="text-[10px] font-bold text-[#A1A1A6] uppercase tracking-widest block">
+                  <span className="text-[10px] font-bold text-[#9CA3AF] uppercase tracking-widest block">
                     Calculated Total Calories
                   </span>
-                  <div className="flex items-center justify-center gap-1 text-3xl font-black text-[#F5F5F7] mt-0.5">
-                    <Flame className="w-6 h-6 text-[#0A84FF]" />
+                  <div className="flex items-center justify-center gap-1 text-3xl font-black text-[#F9FAFB] mt-0.5">
+                    <Flame className="w-6 h-6 text-[#10B981]" />
                     <motion.span
                       key={currentCalories}
-                      initial={{ scale: 1.1 }}
+                      initial={{ scale: 1.15 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.2 }}
                     >
                       {currentCalories}
                     </motion.span>
-                    <span className="text-xs text-[#A1A1A6] font-normal">kcal</span>
+                    <span className="text-xs text-[#9CA3AF] font-normal">kcal</span>
                   </div>
                 </div>
 
                 {/* Animated Bar Gauges */}
                 <div className="space-y-3">
                   
-                  {/* Protein Bar (Electric Blue #0A84FF) */}
+                  {/* Protein Bar (Emerald Green #10B981) */}
                   <div>
                     <div className="flex justify-between text-xs font-bold mb-1">
-                      <span className="text-[#0A84FF] flex items-center gap-1">
+                      <span className="text-[#10B981] flex items-center gap-1">
                         <Dumbbell className="w-3.5 h-3.5" /> Protein
                       </span>
-                      <span className="text-[#F5F5F7]">{currentProtein}g / <span className="text-[#A1A1A6]">{currentGoal.targetProtein}g</span></span>
+                      <span className="text-[#F9FAFB]">{currentProtein}g / <span className="text-[#9CA3AF]">{currentGoal.targetProtein}g</span></span>
                     </div>
-                    <div className="relative w-full h-3 bg-[#111214] rounded-full overflow-hidden border border-white/10">
+                    <div className="relative w-full h-3 bg-[#0F172A] rounded-full overflow-hidden border border-white/10">
                       <motion.div
-                        className="h-full bg-gradient-to-r from-[#0A84FF] to-blue-400 rounded-full"
+                        className="h-full bg-gradient-to-r from-[#10B981] to-emerald-400 rounded-full"
                         initial={{ width: 0 }}
                         animate={{ width: `${Math.min(100, (currentProtein / currentGoal.targetProtein) * 100)}%` }}
-                        transition={{ duration: 0.25, ease: 'easeOut' }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                       />
                     </div>
                   </div>
 
-                  {/* Carbohydrates Bar (Cyan #22D3EE) */}
+                  {/* Carbohydrates Bar (Cyber Teal #06B6D4) */}
                   <div>
                     <div className="flex justify-between text-xs font-bold mb-1">
-                      <span className="text-[#22D3EE]">Carbohydrates</span>
-                      <span className="text-[#F5F5F7]">{currentCarbs}g / <span className="text-[#A1A1A6]">{currentGoal.targetCarbs}g</span></span>
+                      <span className="text-[#06B6D4]">Carbohydrates</span>
+                      <span className="text-[#F9FAFB]">{currentCarbs}g / <span className="text-[#9CA3AF]">{currentGoal.targetCarbs}g</span></span>
                     </div>
-                    <div className="relative w-full h-3 bg-[#111214] rounded-full overflow-hidden border border-white/10">
+                    <div className="relative w-full h-3 bg-[#0F172A] rounded-full overflow-hidden border border-white/10">
                       <motion.div
-                        className="h-full bg-gradient-to-r from-[#22D3EE] to-cyan-300 rounded-full"
+                        className="h-full bg-gradient-to-r from-[#06B6D4] to-teal-300 rounded-full"
                         initial={{ width: 0 }}
                         animate={{ width: `${Math.min(100, (currentCarbs / currentGoal.targetCarbs) * 100)}%` }}
-                        transition={{ duration: 0.25, ease: 'easeOut' }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                       />
                     </div>
                   </div>
 
-                  {/* Fats Bar (Ice Blue #7DD3FC) */}
+                  {/* Fats Bar (Ice Blue #38BDF8) */}
                   <div>
                     <div className="flex justify-between text-xs font-bold mb-1">
-                      <span className="text-[#7DD3FC]">Healthy Fats</span>
-                      <span className="text-[#F5F5F7]">{currentFat}g / <span className="text-[#A1A1A6]">{currentGoal.targetFat}g</span></span>
+                      <span className="text-[#38BDF8]">Healthy Fats</span>
+                      <span className="text-[#F9FAFB]">{currentFat}g / <span className="text-[#9CA3AF]">{currentGoal.targetFat}g</span></span>
                     </div>
-                    <div className="relative w-full h-3 bg-[#111214] rounded-full overflow-hidden border border-white/10">
+                    <div className="relative w-full h-3 bg-[#0F172A] rounded-full overflow-hidden border border-white/10">
                       <motion.div
-                        className="h-full bg-gradient-to-r from-[#7DD3FC] to-sky-200 rounded-full"
+                        className="h-full bg-gradient-to-r from-[#38BDF8] to-sky-300 rounded-full"
                         initial={{ width: 0 }}
                         animate={{ width: `${Math.min(100, (currentFat / currentGoal.targetFat) * 100)}%` }}
-                        transition={{ duration: 0.25, ease: 'easeOut' }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                       />
                     </div>
                   </div>
@@ -442,16 +442,18 @@ export const BowlBuilderPage: React.FC = () => {
               </div>
 
               {/* Add Custom Bowl to Cart CTA */}
-              <button
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
                 disabled={selectedPantryItems.length === 0}
                 onClick={handleAddBowlToCart}
-                className="w-full py-4 rounded-2xl bg-[#0A84FF] hover:bg-[#0071E3] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-between px-5 shadow-xl shadow-[#0A84FF]/20 transition-all hover:scale-102 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 rounded-2xl bg-[#10B981] hover:bg-[#059669] text-black font-black text-xs uppercase tracking-wider flex items-center justify-between px-5 shadow-xl shadow-[#10B981]/25 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span className="flex items-center gap-2">
                   <ShoppingBag className="w-4 h-4" /> Add Bowl to Cart
                 </span>
                 <span className="text-sm font-black">{formatCurrency(totalPrice)}</span>
-              </button>
+              </motion.button>
 
             </div>
           </div>
@@ -461,20 +463,20 @@ export const BowlBuilderPage: React.FC = () => {
       </div>
 
       {/* MOBILE STICKY FLOATING ACTION BAR */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-30 p-3 bg-[#000000]/95 backdrop-blur-xl border-t border-white/10 shadow-2xl flex items-center justify-between gap-3 text-[#F5F5F7]">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-30 p-3 bg-[#090D16]/98 backdrop-blur-2xl border-t border-[#10B981]/30 shadow-2xl flex items-center justify-between gap-3 text-[#F9FAFB]">
         <div>
-          <div className="flex items-center gap-2 text-xs font-extrabold text-[#F5F5F7]">
-            <span className="text-[#0A84FF]">{currentProtein}g Protein</span>
+          <div className="flex items-center gap-2 text-xs font-black text-[#F9FAFB]">
+            <span className="text-[#10B981]">{currentProtein}g Protein</span>
             <span>•</span>
-            <span className="text-[#22D3EE]">{currentCalories} kcal</span>
+            <span className="text-[#06B6D4]">{currentCalories} kcal</span>
           </div>
-          <span className="text-[10px] text-[#A1A1A6] font-semibold">{selectedPantryItems.length} pantry items selected</span>
+          <span className="text-[10px] text-[#9CA3AF] font-semibold">{selectedPantryItems.length} pantry items selected</span>
         </div>
 
         <button
           disabled={selectedPantryItems.length === 0}
           onClick={handleAddBowlToCart}
-          className="py-2.5 px-4 rounded-xl bg-[#0A84FF] hover:bg-[#0071E3] text-white font-extrabold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-[#0A84FF]/20 disabled:opacity-50"
+          className="py-2.5 px-4 rounded-xl bg-[#10B981] hover:bg-[#059669] text-black font-black text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-[#10B981]/25 disabled:opacity-50"
         >
           <ShoppingBag className="w-4 h-4" /> Add ({formatCurrency(totalPrice)})
         </button>

@@ -2,55 +2,55 @@
 
 @layer base {
   :root {
-    --bg-black: #000000;
-    --surface-dark: rgba(10, 10, 12, 0.75);
-    --card-glass: rgba(17, 18, 20, 0.65);
-    --hairline-border: rgba(255, 255, 255, 0.12);
-    --electric-blue: #0A84FF;
-    --cyan-accent: #22D3EE;
-    --ice-blue: #7DD3FC;
-    --text-primary: #F5F5F7;
-    --text-secondary: #A1A1A6;
+    --bg-obsidian: #090D16;
+    --surface-glass: rgba(16, 24, 39, 0.75);
+    --hairline-border: rgba(16, 185, 129, 0.2);
+    --emerald-primary: #10B981;
+    --cyber-teal: #06B6D4;
+    --ice-blue: #38BDF8;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
   }
 
   body {
-    background-color: var(--bg-black);
+    background-color: var(--bg-obsidian);
     color: var(--text-primary);
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     letter-spacing: -0.01em;
   }
 }
 
-/* Custom Frosted Glassmorphism Utilities */
+/* Custom Obsidian Emerald Glassmorphism Utilities */
 .apple-card, .glass-panel {
-  background: rgba(15, 17, 21, 0.7);
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: 1.5rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .apple-card:hover, .glass-panel:hover {
-  border-color: rgba(10, 132, 255, 0.4);
-  background: rgba(18, 21, 28, 0.8);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 20px rgba(10, 132, 255, 0.15);
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(20, 30, 52, 0.82);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 25px rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
 }
 
 .apple-input {
-  background: rgba(10, 10, 12, 0.7);
+  background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #F5F5F7;
-  transition: all 0.2s ease-out;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #F9FAFB;
+  transition: all 0.25s ease-out;
 }
 
 .apple-input:focus {
   outline: none;
-  border-color: #0A84FF;
-  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.25);
-  background: rgba(10, 10, 12, 0.85);
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  background: rgba(15, 23, 42, 0.95);
 }
 
 /* Scrollbar Styling */
@@ -59,12 +59,22 @@
   height: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(9, 13, 22, 0.6);
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(16, 185, 129, 0.3);
   border-radius: 9999px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #0A84FF;
+  background: #10B981;
+}
+
+/* Pulse Keyframes for Badges */
+@keyframes emeraldGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
+}
+
+.emerald-glow {
+  animation: emeraldGlow 3s infinite ease-in-out;
 }

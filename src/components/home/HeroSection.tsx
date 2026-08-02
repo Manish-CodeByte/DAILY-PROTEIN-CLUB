@@ -88,10 +88,10 @@ export const HeroSection: React.FC = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative max-w-xs sm:max-w-sm"
               >
-                {/* Floating Grilled Chicken Bowl PNG */}
+                {/* Floating Top Power Bowl PNG */}
                 <img
-                  src="/grilled-chicken-bowl.png"
-                  alt="High Protein Herb Grilled Chicken & Avocado Bowl Manipal"
+                  src="/hero-protein-bowl.png"
+                  alt="High Protein Egg, Avocado & Mushroom Power Bowl Manipal"
                   className="w-full h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] rounded-full border border-white/10 bg-black/40 p-2"
                 />
 
@@ -103,7 +103,7 @@ export const HeroSection: React.FC = () => {
                   className="absolute top-2 left-0 sm:top-4 sm:-left-4 px-3 py-1.5 rounded-2xl bg-[#0A0A0C]/95 backdrop-blur-md border border-[#0A84FF]/40 text-xs font-bold text-[#F5F5F7] shadow-xl flex items-center gap-1.5"
                 >
                   <Dumbbell className="w-3.5 h-3.5 text-[#0A84FF]" />
-                  <span>45g Protein</span>
+                  <span>38g Protein</span>
                 </motion.div>
 
                 {/* Floating Macro Tag 2 */}
@@ -114,7 +114,7 @@ export const HeroSection: React.FC = () => {
                   className="absolute bottom-2 right-0 sm:bottom-6 sm:-right-4 px-3 py-1.5 rounded-2xl bg-[#0A0A0C]/95 backdrop-blur-md border border-[#22D3EE]/40 text-xs font-bold text-[#F5F5F7] shadow-xl flex items-center gap-1.5"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-[#22D3EE]" />
-                  <span>580 kcal • Grilled Chicken & Avocado</span>
+                  <span>520 kcal • Clean Egg & Avocado Bowl</span>
                 </motion.div>
               </motion.div>
             </div>

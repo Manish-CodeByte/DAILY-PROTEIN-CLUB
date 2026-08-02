@@ -38,10 +38,17 @@ export const App: React.FC = () => {
     <BrowserRouter>
       <CartProvider>
         <ScrollToTop />
-        <div className="min-h-screen flex flex-col bg-[#0B0B0B] text-white selection:bg-[#39D353]/30 selection:text-[#39D353]">
+        <div className="relative min-h-screen flex flex-col bg-[#000000] text-[#F5F5F7] selection:bg-[#0A84FF]/30 selection:text-[#0A84FF]">
+          
+          {/* Subtle Ambient Food Prep Background Texture Layer */}
+          <div
+            className="fixed inset-0 pointer-events-none z-0 opacity-10 bg-cover bg-center filter contrast-125 mix-blend-luminosity"
+            style={{ backgroundImage: "url('/website-bg-texture.png')" }}
+          />
+
           <Navbar />
           
-          <div className="flex-grow">
+          <div className="flex-grow relative z-10">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/menu" element={<MenuPage />} />

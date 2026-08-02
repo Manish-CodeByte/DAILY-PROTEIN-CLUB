@@ -46,8 +46,8 @@ export const WhyChooseUsSection: React.FC = () => {
 
   return (
     <section className="py-20 bg-[#000000] text-[#F5F5F7] relative border-t border-white/10 overflow-hidden">
-      {/* Background Ambient Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#0A84FF]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-cover bg-center opacity-10 filter contrast-125 mix-blend-luminosity pointer-events-none" style={{ backgroundImage: "url('/website-bg-texture.png')" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
